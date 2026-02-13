@@ -31,28 +31,26 @@
                         <div class="row">
                             <div class="col-12 mx-auto">
                                 <div class="d-flex justify-content-between">
-                                    <h3>Delete User with ID = ${id}</h3>
+                                    <h3>User Detail with: ${id}</h3>
                                 </div>
-                                <div class="alert alert-danger">
-                                    Are you sure to delete this user?
-                                </div>
-                                <form:form action="/admin/user/delete" modelAttribute="newUser" method="POST">
-                                    <div class="mb-3" style="display: none;">
-                                        <form:label path="id" class="form-label">ID</form:label>
-                                        <form:input type="text" path="id" class="form-control" value="${id}" />
+                                <hr><br>
+                                <div class="card mx-auto" style="width: 60%">
+                                    <div class="card-header">
+                                        User Information
                                     </div>
-
-                                    <button class="btn btn-danger">
-                                        confirm
-                                    </button>
-                                </form:form>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Name: ${user.fullName}</li>
+                                        <li class="list-group-item">Email: ${user.email}</li>
+                                        <li class="list-group-item">Phone number: ${user.phone}</li>
+                                        <li class="list-group-item">Address: ${user.address}</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
                         <br>
                         <a href="/admin/user" class="btn btn-primary">Back</a>
                     </div>
-
                 </div>
 
             </main>
